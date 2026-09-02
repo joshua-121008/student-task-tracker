@@ -7,6 +7,43 @@
     <link rel="stylesheet" href="style.css">
     <title> Student Task Manager</title>
 </head>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="index.js"></script>
+<script>
+    const loggedIn = localStorage.getItem("j1LoggedIn");
+
+    if (loggedIn !== "true") {
+        window.location.href = "login.html";
+    }
+</script>
+<script>
+async function loadLoggedInUser() {
+    try {
+        const response = await fetch("/api/profile");
+
+        if (!response.ok) {
+            window.location.href = "login.html";
+            return;
+        }
+
+        const data = await response.json();
+
+        const name = data.user.name;
+
+        document.getElementById("profileName").textContent = name;
+
+        // First letter of the user's name
+        document.getElementById("profileInitial").textContent =
+            name.charAt(0).toUpperCase();
+
+    } catch (error) {
+        console.error("Could not load user:", error);
+    }
+}
+
+loadLoggedInUser();
+</script>
+<script src="js/index.js"></script>
 
 <body class="index-body">
 
@@ -23,9 +60,10 @@
         </div>
 
         <!-- Profile -->
-        <a href="profile.html" class="profile-icon">
-            <img src="images/profile.jpg" alt="Joshua's Profile">
-        </a>
+<a href="profile.html" class="profile-button">
+    <span class="profile-avatar" id="profileInitial">?</span>
+    <span><span id="profileName">Profile</span>'s Profile</span>
+</a>
 
     </header>
 
@@ -33,12 +71,12 @@
     <!-- Navigation -->
     <nav class="main-nav">
 
-        <a href="index.html">Home</a>
-        <a href="tasks.html">Tasks</a>
-        <a href="add-tasks.html">Add Tasks</a>
-        <a href="profile.html">Profile</a>
+    <a href="index.html" class="nav-button active">Home</a>
+    <a href="tasks.html" class="nav-button">Tasks</a>
+    <a href="add-tasks.html" class="nav-button">Add Tasks</a>
+    <a href="profile.html" class="nav-button">Profile</a>
 
-    </nav>
+</nav>
 
 
     <!-- Welcome -->
@@ -82,16 +120,15 @@
         </section>
 
 
-        <!-- Progress Graph -->
         <section class="progress-section">
 
-            <h2>Task Progress</h2>
+    <h2>Task Progress</h2>
 
-            <div class="graph-placeholder">
-                <p>Task completion graph will appear here.</p>
-            </div>
+    <div class="chart-container">
+        <canvas id="taskChart"></canvas>
+    </div>
 
-        </section>
+</section>
 
 
         <!-- About Joshua -->
@@ -119,7 +156,7 @@
             </p>
 
             <p>
-                J1 – Student Task Manager is one of my projects, created to
+                 Student Task Manager is one of my projects, created to
                 help students organize their tasks, track their progress,
                 and manage their work efficiently.
             </p>
@@ -144,3 +181,16 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+

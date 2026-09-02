@@ -1,93 +1,258 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Task</title>
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Add Task - J1</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 
 <body class="add-task-body">
 
-    <header>
-        <h1> Add Task</h1>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="tasks.html">Tasks</a>
-            <a href="profile.html">Profile</a>
-        </nav>
+    <!-- Header -->
+
+    <header class="main-header">
+
+        <div class="header-content">
+
+            <img
+                src="task.png"
+                alt="J1 Logo"
+                class="logo"
+            >
+
+            <div>
+
+                <h1>Student Task Manager</h1>
+
+                <p>Organize. Track. Complete.</p>
+
+            </div>
+
+        </div>
+
     </header>
 
-    <main>
 
-        <h2>Add New Task</h2>
+    <!-- Navigation -->
 
-        <form id="taskForm">
+    <nav class="main-nav">
 
-            <!-- Task Title -->
-            <label for="taskTitle">Task Title</label>
-            <input 
-                type="text" 
-                id="taskTitle" 
-                name="taskTitle"
-                placeholder="Enter task title"
-                required
-            >
+        <a href="index.html">Home</a>
 
-            <!-- Description -->
-            <label for="description">Description</label>
-            <textarea 
-                id="description" 
-                name="description"
-                placeholder="Enter task description"
-                rows="5"
-            ></textarea>
+        <a href="tasks.html">Tasks</a>
 
-            <!-- Category -->
-            <label for="category">Category</label>
-            <select id="category" name="category">
-                <option value="">Select Category</option>
-                <option value="College">College</option>
-                <option value="Personal">Personal</option>
-                <option value="Project">Project</option>
-                <option value="Work">Work</option>
-            </select>
+        <a href="add-tasks.html">Add Tasks</a>
 
-            <!-- Priority -->
-            <label for="priority">Priority</label>
-            <select id="priority" name="priority">
-                <option value="">Select Priority</option>
-                <option value="Low">Low</option>
-                <option value="Medium">Medium</option>
-                <option value="High">High</option>
-            </select>
+        <a href="profile.html">Profile</a>
 
-            <!-- Due Date -->
-            <label for="dueDate">Due Date</label>
-            <input 
-                type="date" 
-                id="dueDate" 
-                name="dueDate"
-            >
+    </nav>
 
-            <!-- Status -->
-            <label for="status">Status</label>
-            <select id="status" name="status">
-                <option value="Pending">Pending</option>
-                <option value="Completed">Completed</option>
-            </select>
 
-            <!-- Buttons -->
-            <button type="submit">Save Task</button>
-            <button type="reset">Reset</button>
+    <!-- Main -->
 
-        </form>
+    <main class="add-task-container">
+
+
+        <section class="add-task-card">
+
+            <h2>Add New Task</h2>
+
+            <p class="form-subtitle">
+                Create a task and keep your work organized.
+            </p>
+
+
+            <form id="taskForm">
+
+
+                <!-- Task Title -->
+
+                <label for="taskTitle">
+                    Task Title
+                </label>
+
+                <input
+                    type="text"
+                    id="taskTitle"
+                    name="taskTitle"
+                    placeholder="Enter task title"
+                    required
+                >
+
+
+                <!-- Description -->
+
+                <label for="description">
+                    Description
+                </label>
+
+                <textarea
+                    id="description"
+                    name="description"
+                    placeholder="Enter task description"
+                    rows="5"
+                ></textarea>
+
+
+                <!-- Category -->
+
+                <label for="category">
+                    Category
+                </label>
+
+                <select
+                    id="category"
+                    name="category"
+                    required
+                >
+
+                    <option value="">
+                        Select Category
+                    </option>
+
+                    <option value="College">
+                        College
+                    </option>
+
+                    <option value="Personal">
+                        Personal
+                    </option>
+
+                    <option value="Project">
+                        Project
+                    </option>
+
+                    <option value="Work">
+                        Work
+                    </option>
+
+                </select>
+
+
+                <!-- Priority -->
+
+                <label for="priority">
+                    Priority
+                </label>
+
+                <select
+                    id="priority"
+                    name="priority"
+                    required
+                >
+
+                    <option value="">
+                        Select Priority
+                    </option>
+
+                    <option value="Low">
+                        Low
+                    </option>
+
+                    <option value="Medium">
+                        Medium
+                    </option>
+
+                    <option value="High">
+                        High
+                    </option>
+
+                </select>
+
+
+                <!-- Due Date -->
+
+                <label for="dueDate">
+                    Due Date
+                </label>
+
+                <input
+                    type="date"
+                    id="dueDate"
+                    name="dueDate"
+                >
+
+
+                <!-- Status -->
+
+                <label for="status">
+                    Status
+                </label>
+
+                <select
+                    id="status"
+                    name="status"
+                >
+
+                    <option value="Pending">
+                        Pending
+                    </option>
+
+                    <option value="Completed">
+                        Completed
+                    </option>
+
+                </select>
+
+
+                <!-- Buttons -->
+
+                <div class="task-buttons">
+
+                    <button
+                        type="submit"
+                        id="saveTask"
+                    >
+                        Save Task
+                    </button>
+
+
+                    <button
+                        type="reset"
+                        id="resetTask"
+                        class="reset-button"
+                    >
+                        Reset
+                    </button>
+
+                </div>
+
+
+                <!-- Message -->
+
+                <p id="taskMessage"></p>
+
+            </form>
+
+        </section>
 
     </main>
 
-    <script src="script.js"></script>
+
+    <!-- jQuery -->
+
+    <script
+        src="https://code.jquery.com/jquery-3.7.1.min.js">
+    </script>
+
+
+    <!-- Your JavaScript -->
+
+    <script src="add-tasks.js"></script>
+
 
 </body>
+
 </html>
+

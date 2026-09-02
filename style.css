@@ -1,584 +1,184 @@
-.index-body{
-    background-color: #0F172A;
-    color: #F8FAFC;
-    }
-a{
-    color: #F8FAFC;
-}
-.add-task-body {
-    background-color: #1E1B2E;
-    color: #F5F3FF;
-}
-
-.add-task-body  h2 {
-    color: #C4B5FD;
-}
-
-.add-task-body  input,
-.add-task-body  textarea,
-.add-task-body  select {
-    background-color: #2D2640;
-    color: #FFFFFF;
-    border: 1px solid #6D5A9E;
-}
-
-.add-task-body  button {
-    background-color: #8B5CF6;
-    color: white;
-}
-
-.tasks-body {
-    background-color: #1C1917;
-    color: #FAFAF9;
-}
-
-.tasks-body  h2 {
-    color: #FDBA74;
-}
-
-.tasks-body  .task-card {
-    background-color: #292524;
-    border: 1px solid #57534E;
-}
-
-
-.task-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-}
-.task-card1 {
-    background-color: #292524;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #57534E;
-}
-.task-card2 {
-    background-color: #292524;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #57534E;
-}.task-card3 {
-    background-color: #292524;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #57534E;
-}.task-card4 {
-    background-color: #292524;
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid #57534E;
-}
-.task-card1 button {
-    padding: 8px 14px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-}
-.task-card2 button {
-    padding: 8px 14px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-}
-.task-card3 button {
-    padding: 8px 14px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-}
-.task-card4 button {
-    padding: 8px 14px;
-    margin: 5px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 14px;
-}
-.complete-btn {
-    background-color: #16A34A;
-    color: white;
-}
-
-.edit-btn {
-    background-color: #F59E0B;
-    color: white;
-}
-
-.delete-btn {
-    background-color: #DC2626;
-    color: white;
-}
-.profile-body {
-    background-color: #0F2929;
-    color: #E6FFFB;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 30px;
-}
-.profile-body img {
-    border-radius: 50%;
-    border: 4px solid #2DD4BF;
-}
-.profile-body p {
-    font-size: 16px;
-    margin: 12px 0;
-    color: #CCFBF1;
-}
-.profile-body h1 {
-    color: #5EEAD4;
-    font-size: 36px;
-    margin-bottom: 25px;
-}
-.profile-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.nav-links {
-    display: flex;
-    gap: 25px;
-    justify-content: center;
-}
 /* =========================
-   INDEX PAGE
+   J1 LOGIN PAGE
    ========================= */
 
-.index-body {
-    margin: 0;
-    padding: 0;
-    background-color: #0F172A;
-    color: #F8FAFC;
-    font-family: Arial, sans-serif;
-}
-
-
-/* =========================
-   HEADER
-   ========================= */
-
-.main-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 20px 40px;
-    background-color: #1E1B4B;
-    border-bottom: 1px solid #312E81;
-}
-
-.header-content {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.header-content h1 {
-    margin: 0;
-    color: #FFFFFF;
-    font-size: 30px;
-}
-
-.header-content p {
-    margin: 5px 0 0;
-    color: #C4B5FD;
-}
-
-
-/* Logo */
-
-.logo {
-    width: 65px;
-    height: 65px;
-    object-fit: contain;
-}
-
-
-/* Profile Icon */
-
-.profile-icon img {
-    width: 55px;
-    height: 55px;
-
-    border-radius: 50%;
-    border: 3px solid #8B5CF6;
-
-    object-fit: cover;
-}
-
-.profile-icon img:hover {
-    transform: scale(1.08);
-}
-
-
-/* =========================
-   NAVIGATION
-   ========================= */
-
-.main-nav {
-    display: flex;
-    justify-content: center;
-    gap: 35px;
-
-    padding: 18px;
-
-    background-color: #111827;
-}
-
-.main-nav a {
-    color: #C4B5FD;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.main-nav a:hover {
-    color: #A78BFA;
-}
-
-
-/* =========================
-   WELCOME SECTION
-   ========================= */
-
-.welcome-section {
-    text-align: center;
-    padding: 50px 20px 30px;
-}
-
-.welcome-section h2 {
-    font-size: 32px;
-    color: #C4B5FD;
-}
-
-.welcome-section p {
-    color: #CBD5E1;
-    font-size: 17px;
-}
-
-
-/* =========================
-   STATISTICS
-   ========================= */
-
-.stats-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-
-    max-width: 1100px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-.stat-card {
-    background-color: #1E293B;
-
-    padding: 25px;
-    border-radius: 15px;
-
-    text-align: center;
-
-    border: 1px solid #334155;
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-.stat-card h3 {
-    color: #CBD5E1;
-}
-
-.stat-card p {
-    font-size: 32px;
-    font-weight: bold;
-    color: #8B5CF6;
-}
-
-
-/* =========================
-   GRAPH
-   ========================= */
-
-.progress-section {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-}
-
-.progress-section h2 {
-    color: #C4B5FD;
-}
-
-.graph-placeholder {
-    height: 300px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background-color: #1E293B;
-
-    border: 1px solid #334155;
-    border-radius: 15px;
-
-    color: #94A3B8;
-}
-
-
-/* =========================
-   ABOUT ME
-   ========================= */
-
-.about {
-    max-width: 850px;
-    margin: 60px auto;
-    padding: 40px;
-
-    text-align: center;
-
-    background-color: #1E293B;
-
-    border-radius: 20px;
-
-    border: 1px solid #334155;
-
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-}
-
-.about h2 {
-    color: #C4B5FD;
-    font-size: 30px;
-}
-
-.about-image {
-    width: 150px;
-    height: 150px;
-
-    border-radius: 50%;
-
-    border: 4px solid #8B5CF6;
-
-    object-fit: cover;
-
-    margin: 20px;
-}
-
-.about h3 {
-    color: #A78BFA;
-}
-
-.about p {
-    color: #CBD5E1;
-    line-height: 1.7;
-}
-
-
-/* =========================
-   FOOTER
-   ========================= */
-
-footer {
-    text-align: center;
-
-    padding: 25px;
-
-    margin-top: 50px;
-
-    background-color: #111827;
-
-    color: #64748B;
-}
-/* =========================
-   ADD TASK PAGE
-   ========================= */
-
-.add-task-body {
+.login-body {
     margin: 0;
     min-height: 100vh;
-    background-color: #1E1B2E;
-    color: #F5F3FF;
-    font-family: Arial, sans-serif;
-}
 
-
-/* =========================
-   HEADER
-   ========================= */
-
-.add-task-body header {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    padding: 20px 40px;
+    font-family: Arial, Helvetica, sans-serif;
 
-    background-color: #2D2640;
-    border-bottom: 1px solid #6D5A9E;
+    background: #eaf4ff;
+    color: #071a2b;
 }
 
-.add-task-body header h1 {
-    margin: 0;
-    color: #C4B5FD;
-}
-
-
-/* Navigation */
-
-.add-task-body nav {
-    display: flex;
-    gap: 25px;
-}
-
-.add-task-body nav a {
-    color: #DDD6FE;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.add-task-body nav a:hover {
-    color: #A78BFA;
-}
-
-
-/* =========================
-   MAIN CONTENT
-   ========================= */
-
-.add-task-body main {
-    max-width: 650px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
-.add-task-body main h2 {
-    text-align: center;
-    color: #C4B5FD;
-    font-size: 30px;
-    margin-bottom: 30px;
-}
-
-
-/* =========================
-   FORM
-   ========================= */
-
-#taskForm {
-    display: flex;
-    flex-direction: column;
-
-    gap: 10px;
-
-    background-color: #2D2640;
-
-    padding: 35px;
-
-    border-radius: 18px;
-
-    border: 1px solid #6D5A9E;
-
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-
-/* Labels */
-
-#taskForm label {
-    margin-top: 10px;
-
-    color: #DDD6FE;
-
-    font-weight: bold;
-}
-
-
-/* Inputs, Textarea and Select */
-
-#taskForm input,
-#taskForm textarea,
-#taskForm select {
+.login-box {
     width: 100%;
+    max-width: 420px;
+
+    padding: 40px;
+
+    background: #ffffff;
+
+    border: 1px solid #c8dff2;
+    border-radius: 14px;
+
+    box-shadow: 0 12px 35px rgba(7, 26, 43, 0.12);
+}
+
+.login-box h1 {
+    margin: 0 0 8px;
+
+    text-align: center;
+
+    color: #071a2b;
+    font-size: 30px;
+}
+
+.login-box > p {
+    text-align: center;
+
+    color: #64798c;
+    font-size: 14px;
+}
+
+.login-box form {
+    margin-top: 25px;
+}
+
+.login-box label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #071a2b;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.login-box input {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 18px;
+
     box-sizing: border-box;
 
-    padding: 12px;
+    background: #f8fbff;
 
-    background-color: #1E1B2E;
-
-    color: #F5F3FF;
-
-    border: 1px solid #6D5A9E;
-
+    border: 1px solid #b9d0e5;
     border-radius: 8px;
-
-    font-size: 15px;
 
     outline: none;
-}
 
-
-/* Focus effect */
-
-#taskForm input:focus,
-#taskForm textarea:focus,
-#taskForm select:focus {
-    border-color: #A78BFA;
-
-    box-shadow: 0 0 5px rgba(167, 139, 250, 0.4);
-}
-
-
-/* Placeholder */
-
-#taskForm input::placeholder,
-#taskForm textarea::placeholder {
-    color: #8B819F;
-}
-
-
-/* =========================
-   BUTTONS
-   ========================= */
-
-#taskForm button {
-    padding: 12px 20px;
-
-    margin-top: 10px;
-
-    border: none;
-
-    border-radius: 8px;
+    color: #071a2b;
 
     font-size: 15px;
+}
 
-    font-weight: bold;
+.login-box input:focus {
+    border-color: #1683ff;
+
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(22, 131, 255, 0.12);
+}
+
+.login-box input::placeholder {
+    color: #8a9bab;
+}
+
+.login-box button {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-top: 5px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #1683ff;
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 600;
 
     cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.login-box button:hover {
+    background: #0875ed;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 6px 15px rgba(22, 131, 255, 0.25);
+}
+
+.login-box button:disabled {
+    background: #7aaed6;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+#loginMessage {
+    min-height: 20px;
+
+    margin-top: 15px;
+
+    text-align: center;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#loginMessage.success {
+    color: #16834b;
+}
+
+#loginMessage.error {
+    color: #d32f2f;
+}
+
+.login-box a {
+    color: #1683ff;
+
+    text-decoration: none;
+
+    font-weight: 600;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+
+    .login-body {
+        padding: 15px;
+    }
+
+    .login-box {
+        padding: 30px 22px;
+    }
+
+    .login-box h1 {
+        font-size: 26px;
+    }
 }
 
 
-/* Save button */
 
-#taskForm button[type="submit"] {
-    background-color: #8B5CF6;
-    color: white;
-}
-
-#taskForm button[type="submit"]:hover {
-    background-color: #7C3AED;
-}
-
-
-/* Reset button */
-
-#taskForm button[type="reset"] {
-    background-color: #4B445C;
-    color: #F5F3FF;
-}
-
-#taskForm button[type="reset"]:hover {
-    background-color: #5D536F;
-}
