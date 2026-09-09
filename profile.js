@@ -40,5 +40,3 @@ if (user) {
 
     document.getElementById("userEmail").textContent =
         user.email || "Not added";
-
-
